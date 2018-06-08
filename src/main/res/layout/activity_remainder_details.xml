@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemainderDetailsActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="DLF Mall of India"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="73dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtcity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="59dp"
+        android:layout_marginStart="16dp"
+        android:text="City :"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtlastvisited"
+        app:layout_constraintEnd_toStartOf="@+id/cityname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cityname" />
+
+    <TextView
+        android:id="@+id/cityname"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/txtcity"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="49dp"
+        android:text="Delhi"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lastvisiteddate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtcity"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtlastvisited"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtcity"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="Last Visited :"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txttimesvisited"
+        app:layout_constraintEnd_toStartOf="@+id/lastvisiteddate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cityname" />
+
+    <TextView
+        android:id="@+id/lastvisiteddate"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_alignStart="@+id/cityname"
+        android:layout_below="@+id/txtcity"
+        android:layout_marginBottom="176dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="176dp"
+        android:paddingTop="3dp"
+        android:text="3 May 2018"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timesnextreminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/txtlastvisited"
+        app:layout_constraintStart_toEndOf="@+id/txtlastvisited"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txttimesvisited"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtlastvisited"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="Times Visited :"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMAXvisited"
+        app:layout_constraintEnd_toStartOf="@+id/timesvisited"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lastvisiteddate" />
+
+    <TextView
+        android:id="@+id/timesvisited"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/cityname"
+        android:layout_below="@+id/txtlastvisited"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="50dp"
+        android:text="3"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMAXvisited"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txttimesvisited"
+        app:layout_constraintTop_toTopOf="@+id/lastvisiteddate" />
+
+    <TextView
+        android:id="@+id/txtMAXvisited"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/txtcity"
+        android:layout_below="@+id/txttimesvisited"
+        android:text="Maximum Visited on :"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txttimesvisited"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtlastvisited"
+        android:layout_marginTop="31dp"
+        android:clickable="false"
+        android:text="Weekend"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtMAXvisited"
+        app:layout_constraintTop_toTopOf="@+id/txtMAXvisited" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:checked="true"
+        android:clickable="false"
+        android:text="Weekday"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtMAXvisited"
+        app:layout_constraintTop_toTopOf="@+id/txtMAXvisited" />
+
+    <TextView
+        android:id="@+id/txtnxtreminder"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+        android:text="Next reminder on :"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowMap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/timesnextreminder"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/cityname"
+        android:layout_alignTop="@+id/txtnxtreminder"
+        android:layout_below="@+id/checkBox"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="45dp"
+        android:text="Jun 8, 2018"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowMap"
+        app:layout_constraintEnd_toEndOf="@+id/timesvisited"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+
+    <Button
+        android:id="@+id/btnShowMap"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Show Map"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/timesnextreminder"
+        app:layout_constraintStart_toStartOf="@+id/txtnxtreminder"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+</android.support.constraint.ConstraintLayout>

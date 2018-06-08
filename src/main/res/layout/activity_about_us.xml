@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+tools:context=".AboutUsActivity">
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/remindo_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_logo"
+        app:layout_constraintBottom_toTopOf="@+id/about_remindo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/about_remindo"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/about_remindo"
+        app:layout_constraintBottom_toTopOf="@+id/about_version"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remindo_logo" />
+
+
+    <TextView
+        android:id="@+id/about_version"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Version 1.0.0"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/about_developers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_remindo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/about_developers"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:hint="About Developers"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:textColorHint="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:outlineProvider="background"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintBottom_toTopOf="@+id/about_nidhi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_version" />
+
+    <ImageView
+        android:id="@+id/about_nidhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/nidhi_name"
+        app:layout_constraintBottom_toTopOf="@+id/about_nidhi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_developers" />
+
+    <TextView
+        android:id="@+id/about_nidhi2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:hint=
+            "Software Engineer - Banking and Services\n(Sopra Steria India)"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/about_akshit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_nidhi" />
+
+    <ImageView
+        android:id="@+id/about_akshit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/akshit_name"
+        app:layout_constraintBottom_toTopOf="@+id/about_akshit2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_nidhi2" />
+
+    <TextView
+        android:id="@+id/about_akshit2"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:hint="Software Engineer - SAP\n(Sopra Steria India)"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/about_maps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_akshit" />
+
+    <TextView
+        android:id="@+id/about_maps"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:hint="Map Services Sponsor"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColorHint="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/about_here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_akshit2" />
+
+    <ImageView
+        android:id="@+id/about_here"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/here_logo"
+        app:layout_constraintBottom_toTopOf="@+id/about_db"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_maps" />
+
+    <TextView
+        android:id="@+id/about_db"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:hint="Storage Sponsor"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColorHint="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/about_ibm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_here" />
+
+    <ImageView
+        android:id="@+id/about_ibm"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/ibm_bluemix"
+        app:layout_constraintBottom_toTopOf="@+id/about_nred"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_db" />
+
+    <ImageView
+        android:id="@+id/about_nred"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/node_red"
+        app:layout_constraintBottom_toTopOf="@+id/about_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_ibm" />
+
+    <TextView
+        android:id="@+id/about_app"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:hint="App Description"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColorHint="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/about_app2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_nred" />
+
+    <TextView
+        android:id="@+id/about_app2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Coming Soon..!!"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_app" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+
+    <!--app:layout_constraintVertical_bias="0.00"-->

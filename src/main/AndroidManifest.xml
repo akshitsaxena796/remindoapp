@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.BasicMap">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:label="Remindo"
+            android:theme="@style/NoActionBartheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BasicMapActivity"
+            android:label="Your route is HERE" />
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="Gi4QHGlXdGmWyVTLVAih" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="rnItAqV0P_U2WtQYhxkHCQ" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="kVhYXYI27P6sNAh0SHW/51T1VtWofONlFP6Op449EawRaPPHyJbJJvH9gWryiHIMIzjsRGvBjLcF/dtcmQFqT8g17Q/LywEkfJcnp/UT42tRO/QS49vy3EPXMRbCdf7wC1oAuaT97COOM4OYp7vzyS7Pziu8t3jhhJoyV/8JKwqYEDUh5LV4fj7+TNg87FEOR/J3cjHkhGQtI8ao045HUl5dxVz9buxZmiuZUJZiY+G7YnOkhFTfdKWSMiFiJu11ae0/Viuc9nIzTOk16LOPRJdVNKSfS9O3XbN1Cy/tuS2SixqC0MIYhQgYX6xSMlNImoSkU/ymac3mvvMkNd6NgNypsyditG3UuJY7lRZXIpso/Igm04x03BI8Z/8Yv2pwfT26eIOxExITXZPXoEaFkNYVgMKWkT6x7LrUTnAPcMP9RQU6MkgwjUN6xAAUa5CTchgBvNfEYWpJ92+i/P6Ybxj0Ik8bP1Fd/MVf6na7ulOLVyNkT/r5oHfWubuLOnADZFA0yoL7/Z24Dd8N5eb27mrtmQigXgtDcFd0lOlFXENhswM9ZEA3DzKk1DOmWZ5Sn18Yv0v9EwYQQpLU7BTtreOTIOuFqJ0Rg2pMrR7Xl/15+KzYylGlw6fXjU15yl1b8R/+CHtc1rgE/JOOPF+qsx9uieKHhUxJZlYXpPmqfgM=" />
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="false"
+            android:label="MapService">
+            <intent-filter>
+                <action android:name="MapIntent" />
+            </intent-filter>
+        </service>
+
+        <!-- HERE Positioning Service definition. -->
+        <service
+            android:name="com.here.services.internal.LocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <receiver
+            android:name=".NotificationClass"
+            android:enabled="true" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".SignUpActivity"
+            android:label="SignUp"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".BaseDrawerActivity"
+            android:label="BaseDrawerActivity"
+            android:theme="@style/NoActionBartheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".BaseDrawerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.BasicMap.BaseDrawerActivity" />
+        </activity>
+        <activity android:name=".RemainderDetailsActivity"
+            android:label="Reminder Details"/>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+         <receiver android:name=".ReceiverCall"
+         android:exported="true"
+         android:enabled="true">
+         <intent-filter>
+         <action android:name="com.android.ServiceStopped" />
+         <action android:name="android.intent.action.BOOT_COMPLETED" />
+         </intent-filter>
+         </receiver>
+
+        <activity android:name=".LogoutActivity"
+            android:label="Log out"/>
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="About Us" />
+        <activity android:name=".AccountInfoActivity"
+            android:label="Account Info"/>
+    </application>
+
+</manifest>
